@@ -4,6 +4,7 @@ import Nav from './Nav';
 import About from './About';
 import Shop from './Shop';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
 
 // Route renders all matching components i.e. when path='/' and path='about' it will render both
 // Switch makes sure after first match there's no more components rendered
@@ -16,7 +17,8 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/about' component={About} />
-          <Route path='/shop' component={Shop} />
+          <Route path='/shop' exact component={Shop} />
+          <Route path='/shop/:id' component={ItemDetail}  />
         </Switch>
       </div>
     </Router>

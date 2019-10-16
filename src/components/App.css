@@ -18,3 +18,9 @@ nav {
   align-items: center;
   list-style: none;
 }
+
+.pokeName {
+  display: inline-flex;
+  min-width: 250px;
+  padding-left: 10px;
+}
